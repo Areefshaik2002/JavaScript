@@ -68,4 +68,14 @@ var a = [12, 14, 16, 18, 56, 67, 89, 90];
 // filter<50; filter>60
 // reduce summation initial amount 20
 // clone the array
-
+var triple = a.map(a => a * 3);
+console.log(triple);
+var filter = a.filter(a => a<50 && a>60);
+console.log(filter);
+var reduce = a.reduce((a,c)=>{
+    d=c-20;
+    console.log(d);
+    return d;
+},0)
+var clone = [...a];
+console.log(clone);
