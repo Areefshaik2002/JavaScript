@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //GET
+        // var a=fetch("https://reqres.in/api/users?pages=2")
+        // a.then((res)=>{
+        //     console.log(res);
+        // }).catch((error)=>{
+        //     console.error(error);
+        //     })
+        // post
+        // method,headers,body
+        // let b = fetch("https://reqres.in/api/users",{
+        //     method: "POST",
+        //     headers:{
+        //         'content-Type':'application/json',
+        //     },
+        //     body:JSON.stringify({
+        //         name:"JHON",
+        //         place:"New zealand",
+        //         age:54
+        //     })
+        // }).then((res)=>{
+        //     console.log(res);
+        //     return res.json();
+        // })
+        // .then((val)=>{
+        //     console.log(val);
+        // })
+        // .catch((error)=>{
+        //     console.log(error)
+        // })
+
+        // let c = fetch("https://reqres.in/api/users?pages=1")
+        // c.then((data)=>{
+        //     console.log(data);
+        //     return data.json();
+        // })
+        // .then((info)=>{
+        //     console.log(info);
+        // })
+
+        // let d=fetch("https://reqres.in/api/users/2",{
+        //     method:"PUT",
+        //     headers:{
+        //         'content-Type': 'application/json'
+        //     },
+        //     body:JSON.stringify({
+        //     name:"Sheldon",
+        //     place:"NewYork",
+        //     age:54
+        //     })
+        // }).then((data)=>{
+        //         console.log(data);
+        //         return data.json();
+        //     })
+        //     .then((info)=>{
+        //         console.log(info);
+        // })
+
+        // Delete
+        let e=fetch("https://reqres.in/api/users/2",{
+           method:'DELETE',
+           headers:{
+            'content-Type': 'application/json'
+           },
+           body:JSON.stringify({
+           })
+           }).then((res)=>{
+            console.log(res);
+           }).then((data)=>{
+            console.log(data);
+           })
+        
+    
+    </script>
+</body>
+</html>
