@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather Now</title>
+    <link rel="stylesheet" href="./13WeatherApp.css">
+</head>
+<body>
+    <center>
+        <h1>Weather App</h1>
+        <form id="form">
+            <input type="text" placeholder="enter-text" name="input" id="input"/>
+            <button type="submit">Submit</button>
+        </form >
+            <div id="info">
+
+            </div>
+       
+    </center>
+    
+
+    <script>
+        // formdata, input, info, API 
+        let form = document.getElementById("form");
+        let input = document.getElementById("input");
+        let info = document.getElementById("info");
+        let apiKey = "a58f240e9388d02e0b2f489557bad8e0"; 
+        // const info.textContent = "";
+        const inputValue=input.value;
+        // alert(inputValue);
+        form.addEventListener("submit",((e)=>{
+            e.preventDefault();
+            info.textContent = "";
+            const inputValue=input.value;
+            // alert(inputValue);
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${apiKey}&units=metric`;
+            fetch(url)
+            // get
+            .then((res)=>{
+                console.log(res);
+                return res.json();
+            })
+            .then((data)=>{
+                const {name,main}=data;
+                const para=document.getElementById('info');
+                para.innerHTML=`<p>City : ${name} </p>
+                <p>Temperature is about ${main.temp} <sup>o</sup>C</p>`;
+                console.log(data);
+            })
+            .catch((error)=>{
+                console.error("Couldn't find the entered city");
+                alert("Couldn't find the entered city 300")
+            })
+            form.reset();
+        }))
+
+    </script>
+</body>
+</html>
