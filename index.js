@@ -39,10 +39,10 @@
 // }
 // console.log(g);
 
-changeTextHello = 67;
-console.log(changeTextHello);
+// changeTextHello = 67;
+// console.log(changeTextHello);
 
-document.write("STARTED LEARNING JS");
-alert("STARTED LEARNING JS");
-prompt("Options are:");
-confirm("Are you sure you want to");
+// document.write("STARTED LEARNING JS");
+// alert("STARTED LEARNING JS");
+// prompt("Options are:");
+// confirm("Are you sure you want to");
